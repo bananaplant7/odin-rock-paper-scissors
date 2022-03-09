@@ -9,3 +9,9 @@ Practiced js:
 - conditionals (if, else if, else)
 - scope
 
+Practiced js DOM manipulation: 
+
+- event listeners
+- query selectors
+- altering elements
+- conditionals
