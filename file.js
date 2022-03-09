@@ -80,26 +80,26 @@ score.textContent = `${playerScore}-${computerScore}`;
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', function () {
     results.textContent = playRound(button.className, computerPlay());
+    winOrLose(); // prevent more rounds after score of 5
     keepScore();
 }));
 
-// ends game when a score = 5
 function winOrLose() {
     if (playerScore == 5) {
-        results.textContent = ("you won! :D")
+        results.textContent = ("you won! :D");
     } else if (computerScore == 5) {
-        results.textContent = ("you louse + garbage + balding + L + ratio")
+        results.textContent = ("you louse + garbage + balding + L + ratio");
     }
 }
 
 function keepScore() {
     if (results.textContent.includes("win")) {
         score.textContent = (`${playerScore += 1}-${computerScore}`);
-        winOrLose()
+        winOrLose(); // display msg
     } else if (results.textContent.includes("lose")) {
         score.textContent = (`${playerScore}-${computerScore += 1}`);
-        winOrLose()
+        winOrLose(); // display msg
     } else {
         score.textContent = (`${playerScore}-${computerScore}`);
-    } 
+    }
 }
