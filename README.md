@@ -1,5 +1,10 @@
 # odin-rock-paper-scissors
 
+Practice HTML & CSS:
+ - classes
+ - styling
+ - flex & flex-properties
+
 Practiced js:
 
 - loops
@@ -14,4 +19,4 @@ Practiced js DOM manipulation:
 - event listeners
 - query selectors
 - altering elements
-- conditionals
+
