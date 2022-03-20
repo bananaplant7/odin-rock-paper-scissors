@@ -75,7 +75,7 @@ let computerScore = 0;
 const results = document.querySelector('.results');
 
 const score = document.querySelector('.score');
-score.textContent = `${playerScore}-${computerScore}`;
+score.textContent = `You: ${playerScore} | Computer: ${computerScore}`;
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', function () {
@@ -87,19 +87,48 @@ buttons.forEach(button => button.addEventListener('click', function () {
 function winOrLose() {
     if (playerScore == 5) {
         results.textContent = ("you won! :D");
+        if (score.classList.contains('playAgain')) { // check if function called
+            return;
+        } else {
+            playAgain();
+        }
     } else if (computerScore == 5) {
         results.textContent = ("you louse + garbage + balding + L + ratio");
+        if (score.classList.contains('playAgain')) { // check if function called
+            return;
+        } else {
+            playAgain();
+        }
     }
 }
 
 function keepScore() {
     if (results.textContent.includes("win")) {
-        score.textContent = (`${playerScore += 1}-${computerScore}`);
+        score.textContent = 
+        (`You: ${playerScore += 1} | Computer: ${computerScore}`);
         winOrLose(); // display msg
     } else if (results.textContent.includes("lose")) {
-        score.textContent = (`${playerScore}-${computerScore += 1}`);
+        score.textContent = 
+        (`You: ${playerScore} | Computer: ${computerScore += 1}`);
         winOrLose(); // display msg
     } else {
-        score.textContent = (`${playerScore}-${computerScore}`);
+        score.textContent = 
+        (`You: ${playerScore} | Computer: ${computerScore}`);
     }
+}
+
+function playAgain() {
+    let btn = document.createElement('button');
+    score.classList.add('playAgain'); // check if function called
+    btn.textContent = 'Play again?';
+    document.body.appendChild(btn);
+
+    btn.addEventListener('click', function () {
+        score.classList.remove('playAgain');
+        playerScore = 0;
+        computerScore = 0;
+        score.textContent = `You: ${playerScore} | Computer: ${computerScore}`;
+        results.textContent = 'Make a choice. It is first to 5 points.';
+        btn.remove();
+    });
 }
