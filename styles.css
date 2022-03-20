@@ -1,0 +1,41 @@
+* {
+    font-family: 'Courier New', Courier, monospace
+}
+
+body {
+    background-color: #ffd139;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20vh;
+    font-size: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    font-size: 70px;
+    width: 90px;
+    background-color: #008C80;
+    border-radius: 8px;
+
+}
+
+/* scissors emoji has slightly different size */
+.scissors {
+    font-size: 80px;
+}
+
+.reset {
+    font-size: 40px;
+    width: 300px;
+    background-color: #40AC6E;
+}
+

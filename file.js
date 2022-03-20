@@ -117,11 +117,13 @@ function keepScore() {
     }
 }
 
+container = document.querySelector('.container')
 function playAgain() {
     let btn = document.createElement('button');
+    btn.classList.add('reset') // add another class for styling
     score.classList.add('playAgain'); // check if function called
     btn.textContent = 'Play again?';
-    document.body.appendChild(btn);
+    container.appendChild(btn);
 
     btn.addEventListener('click', function () {
         score.classList.remove('playAgain');
