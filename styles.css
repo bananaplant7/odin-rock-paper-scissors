@@ -17,20 +17,18 @@ body {
 
 .buttons {
     display: flex;
-    gap: 20px;
+    gap: 40px;
+    
 }
 
 button {
     font-size: 70px;
-    width: 90px;
+    width: 200px;
     background-color: #008C80;
     border-radius: 8px;
+    cursor: pointer;
+    
 
-}
-
-/* scissors emoji has slightly different size */
-.scissors {
-    font-size: 80px;
 }
 
 .reset {
