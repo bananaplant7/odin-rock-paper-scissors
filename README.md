@@ -1,5 +1,7 @@
 # odin-rock-paper-scissors
 
+live demo: https://bananaplant7.github.io/odin-rock-paper-scissors/
+
 Practice HTML & CSS:
  - classes
  - styling
